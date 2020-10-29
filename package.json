@@ -1,0 +1,38 @@
+{
+  "name": "@kimchiswap/default-token-list",
+  "version": "1.0.0",
+  "description": "◦ The Kswap default token list",
+  "main": "build/Kswap-default.tokenlist.json",
+  "scripts": {
+    "test": "mocha",
+    "build": "rimraf build && mkdir -p build && node src/write.js > build/Kswap-default.tokenlist.json",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "files": [
+    "build/Kswap-default.tokenlist.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimchiswap/default-token-list.git"
+  },
+  "keywords": [
+    "Kswap",
+    "default",
+    "token",
+    "list"
+  ],
+  "author": "Netixsol",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Kimchiswap/default-token-list/issues"
+  },
+  "homepage": "https://github.com/Kimchiswap/default-token-list#readme",
+  "devDependencies": {
+    "@ethersproject/address": "^5.0.2",
+    "@kimchiswap/token-lists": "^1.0.0",
+    "ajv": "^6.12.3",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.0",
+    "rimraf": "^3.0.2"
+  }
+}
